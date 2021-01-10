@@ -103,6 +103,8 @@ public class Ai : MonoBehaviour
 
         GameManager.Side oppositeSide = GameManager.GetOpponentSide(sideWhoseScoreIsCalculated);
 
+        float best = (isMaximizing) ? float.MinValue : float.MaxValue;
+
         for (i = 0; i < possibleMoves.Count; i++)
         {
             float score = Minimax(depth + 1, possibleMoves[i].board, oppositeSide, alpha, beta);
@@ -113,8 +115,6 @@ public class Ai : MonoBehaviour
             {
                 rootMoves.Add(possibleMoves[i]);
             }
-
-            float best = (isMaximizing) ? float.MinValue : float.MaxValue;
 
             if (isMaximizing)
             {
