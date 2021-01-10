@@ -19,18 +19,6 @@ public class GameUi : MonoBehaviour
         gameEndScreen.SetActive(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static void OpenGameEndScren()
     {
         instance.gameEndScreen.SetActive(true);
@@ -55,8 +43,6 @@ public class GameUi : MonoBehaviour
     {
         instance.whoseTurnText.text = side == GameManager.Side.X ? "X" : "O";
         instance.whoseTurnText.text += "'s turn";
-
-        //instance.whoseTurnImage.sprite = newSprite;
     }
 
     public static void MarkButtonAsPressed(int buttonId)

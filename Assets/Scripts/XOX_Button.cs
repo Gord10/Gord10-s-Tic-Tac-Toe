@@ -15,18 +15,6 @@ public class XOX_Button : MonoBehaviour
         button = GetComponent<Button>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ReportClick(bool isPlayerClick = true)
     {
         if(!GameManager.IsInputAllowed() && isPlayerClick)
@@ -43,5 +31,4 @@ public class XOX_Button : MonoBehaviour
         image.sprite = GameManager.GetSideSprite();
         button.interactable = false;
     }
-
 }

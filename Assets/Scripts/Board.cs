@@ -69,8 +69,6 @@ public class Board
             }
         }
 
-
-
         for (y = 0; y < 3; y++)
         {
             emptySquareAmount = 0;
@@ -220,5 +218,4 @@ public class Board
 
         return duplicateBoard;
     }
-
 }

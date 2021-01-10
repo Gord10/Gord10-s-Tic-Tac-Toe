@@ -18,11 +18,9 @@ public class Ai : MonoBehaviour
     GameManager.Side aiSide = GameManager.Side.O; //This is set at Start, getting player side from GameManager
     GameManager.Side enemySide; //This is also set when AI starts
 
-
     private void Awake()
     {
         instance = this;
-
     }
 
     // Start is called before the first frame update
@@ -32,12 +30,6 @@ public class Ai : MonoBehaviour
         aiSide = GameManager.GetOpponentSide(enemySide);
 
         print("aiSide: " + aiSide.ToString());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public static void StartExecution()
@@ -240,5 +232,4 @@ public class Ai : MonoBehaviour
 
         return possibleMoves;
     }
-
 }

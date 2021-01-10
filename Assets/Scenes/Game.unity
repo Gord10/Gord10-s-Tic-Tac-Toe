@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSprite: {fileID: 21300000, guid: bb6cd895bcad0514fa4ed57ccfbd637f, type: 3}
   oSprite: {fileID: 21300000, guid: cc56cc86ccbbd994f9a1c8047ccf131c, type: 3}
-  playerSide: 1
+  playerSide: 0
 --- !u!4 &1117885724
 Transform:
   m_ObjectHideFlags: 0

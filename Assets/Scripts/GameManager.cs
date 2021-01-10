@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
             state = GameState.EXECUTING_AI;
             Ai.StartExecution();
         }
-        //GameUi.ChangeWhoseTurnImage(GetSideSprite());
     }
 
     public static bool IsInputAllowed()
@@ -101,8 +100,6 @@ public class GameManager : MonoBehaviour
 
     public static void MakeMove(int buttonId)
     {
-        //print("Make move " + buttonId);
-        //SquareManager.MakeMove(buttonId, whoseTurn);
         currentBoard.SetSquareSideById(buttonId, whoseTurn);
 
         if(currentBoard.DoesSideWinMatch(whoseTurn))
@@ -140,13 +137,10 @@ public class GameManager : MonoBehaviour
             Ai.StartExecution();
         }
 
-        //GameUi.ChangeWhoseTurnImage(GetSideSprite());
     }
 
     public static Sprite GetSideSprite()
     {
         return (whoseTurn == Side.X) ? instance.xSprite : instance.oSprite;
     }
-
-
 }
